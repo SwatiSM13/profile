@@ -12,6 +12,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 @Entity
 public class Post {
     @Id
@@ -22,6 +23,8 @@ public class Post {
     private int likes;
     private List<String>comments;
     
+    @ManyToOne
+    private User user;
 	@Lob
 	@Basic(fetch=FetchType.LAZY)
 	@Column(columnDefinition="LONGBLOB")
