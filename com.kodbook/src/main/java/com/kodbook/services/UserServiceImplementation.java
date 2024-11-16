@@ -44,6 +44,5 @@ public class UserServiceImplementation implements UserService {
 	@Override
 	public void updateUser(User user) {
 		repo.save(user);
-		
-	}
+}
 } 
